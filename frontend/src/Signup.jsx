@@ -14,7 +14,6 @@ const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [message, setMessage] = useState('');
-  // const ui ='hello';
   const navigate = useNavigate();
 
   // Password generation logic
@@ -51,7 +50,7 @@ const Signup = () => {
 
     try {
       // Call the signup API
-      const response = await axios.post('http://localhost:3000/api/auth/signup',userData );
+      const response = await axios.post('http://localhost:3000/api/auth/signup', userData);
       setMessage(response.data.message);
       navigate('/'); // Redirect to the home page on successful signup
     } catch (error) {
@@ -144,14 +143,14 @@ const Signup = () => {
             <h3 className="text-lg font-bold text-white">Password Generator Options</h3>
             <div className="space-y-4">
               <label className="flex items-center space-x-3">
-                <span className="text-gray-700">Length:</span>
+                <span className="text-white">Length: {length}</span>
                 <input
-                  type="number"
-                  value={length}
-                  onChange={(e) => setLength(e.target.value)}
+                  type="range"
                   min="8"
                   max="32"
-                  className="w-20 px-2 py-1 bg-transparent border-b-2 text-white focus:outline-none focus:border-green-500"
+                  value={length}
+                  onChange={(e) => setLength(e.target.value)}
+                  className="w-full"
                 />
               </label>
               <label className="flex items-center space-x-3">

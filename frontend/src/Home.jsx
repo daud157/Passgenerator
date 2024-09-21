@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import Services from './Services';
 import AboutUs from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 import './index.css'
+
 import './App.css'
 const Home = () => {
   return (
     <>
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 to-black text-white flex items-center justify-center w-screen">
+    <div className="min-h-screen bg-gradient-to-r from-gray-900 to-black text-white flex items-center justify-center w-screen  border-b-2 ">
       <div className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
         
         {/* Left Side - Text */}
@@ -43,8 +45,8 @@ const Home = () => {
         </div>
         
       </div>
-      <div className="absolute bottom-4 w-full flex justify-center">
-        <p className="text-lg font-semibold text-white rotate-text">
+      <div className="absolute bottom-4 mb-8 w-full flex justify-center">
+        <p className="text-lg font-semibold text-white rotate-text ">
           SecurePass: Your Ultimate Solution for Secure Password Management
         </p>
       </div>
@@ -53,6 +55,7 @@ const Home = () => {
  <Services></Services>
  <AboutUs></AboutUs>
  <Contact></Contact>
+  <Footer></Footer>
 </>
   );
 };
