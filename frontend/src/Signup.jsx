@@ -52,7 +52,7 @@ const Signup = () => {
       // Call the signup API
       const response = await axios.post('http://localhost:3000/api/auth/signup', userData);
       setMessage(response.data.message);
-      navigate('/'); // Redirect to the home page on successful signup
+      navigate('/'); // Redirect to the home page on 
     } catch (error) {
       setMessage(error.response?.data?.message || 'Error during signup');
     }
